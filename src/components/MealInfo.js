@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {useParams, Link} from "react-router-dom";
 import axios from "axios";
 
 const MealInfo = () => {
@@ -26,7 +26,11 @@ const MealInfo = () => {
                 <div className="row">
                     {
                         ings.map((item) =>
-                            <p className="col-3">{item}</p>
+                            <div className="ing-img col-3">
+                                <img src={`https://www.themealdb.com/images/ingredients/${item}.png`} alt="" />
+                                <p>{item}</p>
+                            </div>
+
                         )
                     }
                 </div>
