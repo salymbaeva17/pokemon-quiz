@@ -22,7 +22,7 @@ const Pokemon = () => {
 
                 {filteredPokemon.slice(currentPage * 15, (currentPage * 15) + 15).map(el => {
                     return (
-                        <div className="col-3 text-center">
+                        <div key={el.id} className="col-3 text-center">
                             <img src={el.img} alt={el.name}/>
                             <h4>{el.name}</h4>
                         </div>
@@ -32,7 +32,7 @@ const Pokemon = () => {
                     <ul className="pagination">
                         {
                             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((el, idx) =>
-                                <li className="page-item"  onClick={() => setCurrentPage(idx)}>{el}</li> )
+                                <li className="page-item" key={idx} onClick={() => setCurrentPage(idx)}>{el}</li> )
                         }
                     </ul>
                 </nav>

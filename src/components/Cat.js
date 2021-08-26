@@ -1,34 +1,3 @@
-// import React, {useEffect, useState} from 'react';
-// import axios from "axios";
-//
-// const Cat = () => {
-//     const [catBreed, setCatBreed] = useState([])
-//     const [optionValue, setOptionValue] = useState("")
-//     useEffect(() => {
-//         axios("https://api.thecatapi.com/v1/breeds")
-//             .then(({data}) => setCatBreed(data))
-//     }, [])
-//     return (
-//         <div>
-//             <select>
-//                 {
-//                     catBreed.map(item => {
-//                             return <option key={item.id}>{item.name}</option>
-//                         }
-//                     )
-//                 }
-//             </select>
-//             <div>
-//                 <img src={
-//                     catBreed.map(item => item.cfa_url)} alt=""/>
-//             </div>
-//         </div>
-//     )
-// }
-//
-// export default Cat;
-
-
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 

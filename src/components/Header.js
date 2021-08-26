@@ -12,6 +12,7 @@ const Header = () => {
                 <Link className="nav-link" to="/starwars">StarWars</Link>
                 <Link className="nav-link" to="/people">People</Link>
                 <Link className="nav-link" to="/users">Users</Link>
+                <Link className="nav-link" to="/meals">Meals</Link>
             </nav>
         </header>
     );

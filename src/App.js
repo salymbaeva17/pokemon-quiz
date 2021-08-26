@@ -8,6 +8,8 @@ import Task1 from "./components/Task1";
 import Cat from "./components/Cat";
 import UserInfo from "./components/UserInfo";
 import Users from "./components/Users";
+import Meals from "./components/Meals";
+import MealInfo from "./components/MealInfo";
 
 
 
@@ -23,7 +25,8 @@ function App() {
         <Route path="/people"><Task1 /></Route>
         <Route path="/users"><Users /></Route>
         <Route path="/user/:id"><UserInfo /></Route>
-
+        <Route path="/meals"><Meals /></Route>
+        <Route path="/meal/i=:id"><MealInfo /></Route>
     </Router>
   );
 }
