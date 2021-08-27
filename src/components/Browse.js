@@ -16,13 +16,14 @@ const Browse = () => {
                 {
                     searchedMeals.map(meal =>
                         <div className="col-3 mb-3">
-                            <Link to={`/meal/i=${meal.idMeal}`}>
+                            <Link to={`/meal/${meal.idMeal}`}>
                                 <img src={meal.strMealThumb} alt="item.strMeal" width="300px"/>
                                 {meal.strMeal}
                             </Link>
                         </div>
                     )}
             </div>
+            <Link to="/meals" className="text-center">Back to Meals</Link>
         </div>
 );
 };

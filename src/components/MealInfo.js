@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {useParams, Link} from "react-router-dom";
 import axios from "axios";
 
 const MealInfo = () => {
@@ -27,11 +27,11 @@ const MealInfo = () => {
             <div className="col-6">
                 <div className="row">
                     {
-                        ings.map((item) =>
-                            <div className="ing-img col-3">
+                        ings.map((item, idx) =>
+                            <Link to={`/ingredient/${item}`} key={idx} className="ing-img col-3">
                                 <img src={`https://www.themealdb.com/images/ingredients/${item}.png`} alt="" />
                                 <p>{item}</p>
-                            </div>
+                            </Link>
 
                         )
                     }
@@ -40,7 +40,9 @@ const MealInfo = () => {
             <div className="col-6">
                 <h3>{meal.strMeal}</h3>
                 <p>Instructions: {meal.strInstructions}</p>
+
             </div>
+            <Link to="/meals" className="text-center">Back to Meals</Link>
         </div>
     );
 };

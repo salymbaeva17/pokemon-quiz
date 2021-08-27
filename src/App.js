@@ -11,6 +11,7 @@ import Users from "./components/Users";
 import Meals from "./components/Meals";
 import MealInfo from "./components/MealInfo";
 import Browse from "./components/Browse";
+import IngredientMeal from "./components/IngredientMeal";
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/meals"><Meals /></Route>
         <Route path="/meal/i=:id"><MealInfo /></Route>
         <Route path="/browse/:name"><Browse /></Route>
+        <Route path="/ingredient/:name"><IngredientMeal /></Route>
     </Router>
   );
 }
