@@ -17,7 +17,7 @@ const Meals = () => {
             All Meals
             <div>
                 <input value={inputValue} type="text" onChange={input}/>
-                <Link to="/browse" type="button"><i className="fas fa-search" /></Link>
+                <Link to={`/browse/${inputValue}`} type="button"><i className="fas fa-search" /></Link>
             </div>
             {
                 <div className="row">

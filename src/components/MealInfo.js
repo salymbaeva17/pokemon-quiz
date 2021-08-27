@@ -1,16 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import {useParams, Link} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import axios from "axios";
 
 const MealInfo = () => {
     const params = useParams()
     const [meal, setMeal] = useState({})
+
     const ings = Array(20).fill(0).reduce((acc, item, idx) => {
         if (meal[`strIngredient${idx + 1}`]) {
             return [...acc, meal[`strIngredient${idx + 1}`]]
         }
         return acc
     }, [])
+
     useEffect(() => {
             axios(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`)
                 .then(({data}) => setMeal(data.meals[0]))

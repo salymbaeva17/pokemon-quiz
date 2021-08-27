@@ -28,7 +28,7 @@ function App() {
         <Route path="/user/:id"><UserInfo /></Route>
         <Route path="/meals"><Meals /></Route>
         <Route path="/meal/i=:id"><MealInfo /></Route>
-        <Route path="/browse/s=:name"><Browse /></Route>
+        <Route path="/browse/:name"><Browse /></Route>
     </Router>
   );
 }
